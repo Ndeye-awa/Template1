@@ -79,9 +79,9 @@ const NavLinks = styled.ul`
 
     &:hover {
       color: white; /* Couleur de texte au survol */
-      
+
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         right: 0;
@@ -93,9 +93,9 @@ const NavLinks = styled.ul`
 
     &.active {
       color: rgb(100, 21, 255); /* Couleur active */
-      
+
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         right: 0;
@@ -130,23 +130,27 @@ const NavLinks = styled.ul`
 
       &:hover {
         color: rgb(100, 21, 255); /* Couleur au survol pour le menu */
-        
+
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           left: 0;
           right: 0;
           bottom: -2px; /* Réduire l'espace entre le texte et la barre */
           height: 2px; /* Hauteur de la barre */
-          background-color: rgb(100, 21, 255); /* Couleur de la barre au survol */
+          background-color: rgb(
+            100,
+            21,
+            255
+          ); /* Couleur de la barre au survol */
         }
       }
 
       &.active {
         color: rgb(100, 21, 255); /* Couleur active pour le menu */
-        
+
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           left: 0;
           right: 0;
@@ -259,20 +263,26 @@ const TextWrapper = styled.div`
   }
 
   h2 {
-  font-size: 4.6rem;
-  color: rgb(100, 21, 255);
-  background-color: white;
-  display: inline-block;
-  border-radius: 5px;
-  width: 101%;
-  margin: 0; /* Supprime l'espacement */
-  padding: 0px 20px; /* Ajoute un padding pour le contenu */
-  clip-path: polygon(3% 0%, 100% 3%, 97% 98%, 0% 97%); /* Crée un parallélogramme */
+    font-size: 4.6rem;
+    font-weight: 800;
+    color: rgb(100, 21, 255);
+    background-color: white;
+    display: inline-block;
+    border-radius: 5px;
+    width: 101%;
+    margin: 0; /* Supprime l'espacement */
+    padding: 0px 20px; /* Ajoute un padding pour le contenu */
+    clip-path: polygon(
+      3% 0%,
+      100% 3%,
+      97% 98%,
+      0% 97%
+    ); /* Crée un parallélogramme */
 
-  @media (max-width: 768px) {
-    font-size: 1.8rem;
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+    }
   }
-}
 
   button {
     background-color: white;
@@ -343,7 +353,6 @@ const HeroSection = () => {
           <img src="/images/logo.svg" alt="Logo" />
           <h1>Treact</h1>
         </LogoWrapper>
-
         <NavLinkContainer>
           <NavLinks open={isMenuOpen}>
             <li>About</li>
@@ -352,14 +361,10 @@ const HeroSection = () => {
             <li>Pricing</li>
           </NavLinks>
         </NavLinkContainer>
-
-        <HireButton onClick={() => setMenuOpen(false)}>
-          Hire Us
-        </HireButton>{" "}
+        <HireButton onClick={() => setMenuOpen(false)}>Hire Us</HireButton>{" "}
         <Toggler onClick={() => setMenuOpen(!isMenuOpen)}>
           ☰ {/* Affiche le menu */}
         </Toggler>
-
         <CloseButton open={isMenuOpen} onClick={() => setMenuOpen(false)}>
           ✖
         </CloseButton>
