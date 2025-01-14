@@ -248,8 +248,8 @@ const TextWrapper = styled.div`
   }
 
   h1 {
-    font-size: 4.2rem;
-    font-weight: 700;
+    font-size: 4.1rem;
+    font-weight: 800;
     margin: 0; /* Supprime l'espacement */
     margin-bottom: 0.8rem;
 
