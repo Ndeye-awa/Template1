@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Treact</title>
+  </head>
+  <body class="bg-white">
+    <!-- Hero Section -->
+    <section
+      class="relative bg-cover bg-center h-screen text-white"
+      style="background-image: url('./images/banner.jpg')"
+    >
+      <!-- Navbar Section -->
+      <nav class="flex justify-between items-center px-7 md:px-8 py-8">
+        <div class="flex items-center">
+          <img src="./images/logo.svg" alt="Company Logo" class="h-10 mr-3" />
+          <h1 class="text-xl font-bold">Treact</h1>
+        </div>
+        <ul class="hidden md:flex gap-6 text-md font-semibold text-white">
+          <li class="group">
+            <a href="#about" class="relative hover:text-white transition">
+              About
+              <span
+                class="absolute left-0 bottom-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-all"
+              ></span>
+            </a>
+          </li>
+          <li class="group">
+            <a href="#blog" class="relative hover:text-white transition">
+              Blog
+              <span
+                class="absolute left-0 bottom-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-all"
+              ></span>
+            </a>
+          </li>
+          <li class="group">
+            <a href="#locations" class="relative hover:text-white transition">
+              Locations
+              <span
+                class="absolute left-0 bottom-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-all"
+              ></span>
+            </a>
+          </li>
+          <li class="group">
+            <a href="#pricing" class="relative hover:text-white transition">
+              Pricing
+              <span
+                class="absolute left-0 bottom-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-all"
+              ></span>
+            </a>
+          </li>
+        </ul>
+        <button
+          class="hidden md:block bg-primary hover:bg-customBlue text-white px-8 py-2 rounded-md font-semibold transition"
+        >
+          Hire Us
+        </button>
+        <button
+          id="menu-toggler"
+          aria-label="Open Menu"
+          class="md:hidden text-2xl"
+        >
+          &#9776;
+        </button>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 text-black z-50 flex justify-center items-center translate-x-full transition-transform ease-in-out"
+        style="top: -37%"
+      >
+        <div
+          class="w-[90%] md:w-[96%] h-auto bg-white p-4 md:p-6 rounded-lg shadow-xl flex flex-col items-center space-y-6 relative"
+        >
+          <!-- Bouton de fermeture -->
+          <button
+            id="menu-close"
+            aria-label="Close Menu"
+            class="text-3xl absolute top-6 right-4 hover:text-primary md:hidden"
+          >
+            &times;
+          </button>
+          <ul
+            class="flex flex-col gap-5 text-xl font-semibold text-black items-center justify-center"
+          >
+            <li class="group">
+              <a href="#about" class="relative hover:text-primary transition">
+                About
+                <span
+                  class="absolute left-0 bottom-0 w-full h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-all"
+                ></span>
+              </a>
+            </li>
+            <li class="group">
+              <a href="#blog" class="relative hover:text-primary transition">
+                Blog
+                <span
+                  class="absolute left-0 bottom-0 w-full h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-all"
+                ></span>
+              </a>
+            </li>
+            <li class="group">
+              <a
+                href="#locations"
+                class="relative hover:text-primary transition"
+              >
+                Locations
+                <span
+                  class="absolute left-0 bottom-0 w-full h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-all"
+                ></span>
+              </a>
+            </li>
+            <li class="group">
+              <a href="#pricing" class="relative hover:text-primary transition">
+                Pricing
+                <span
+                  class="absolute left-0 bottom-0 w-full h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-all"
+                ></span>
+              </a>
+            </li>
+          </ul>
+          <button
+            class="bg-primary text-lg hover:bg-customPurple text-white px-8 py-3 rounded-md font-semibold transition"
+          >
+            Hire Us
+          </button>
+        </div>
+      </div>
+
+      <!-- Hero Content -->
+      <div
+        class="flex flex-col md:flex-row justify-center md:justify-between items-center py-12 md:py-20 h-full hero-content -translate-y-12"
+      >
+        <!-- Text Section -->
+        <div class=" md:max-w-2xl max-w-[90%] text-center md:text-left px-10">
+          <p class="flex items-center text-xs sm:text-sm mb-2 sm:mb-4">
+            <span class="w-1 h-8 bg-blue-400 mr-3"></span>
+            We have now launched operations in Europe.
+          </p>
+          <h1
+            class="text-2xl  md:text-4xl lg:text-5xl font-extrabold mb-2 sm:mb-4"
+          >
+            Hire the best
+          </h1>
+          <h2
+            class="relative text-xl md:text-4xl lg:text-5xl font-extrabold text-primary inline-block px-4 py-2 sm:px-4 sm:py-3 mb-4 flex items-center justify-center"
+          >
+            Marketing Team.
+            <!-- Fond Parallélogramme -->
+            <span
+              class="absolute inset-0 bg-white transform origin-top-left skew-x-12 w-full h-full -z-10"
+            ></span>
+          </h2>
+          <button
+            class="bg-white text-primary hover:bg-primary hover:text-white px-4 py-4 md:px-6 md:py-3 sm:px-8 sm:py-4 rounded-lg font-bold transition"
+          >
+            Read Customer Stories
+          </button>
+        </div>
+
+        <!-- Conteneur Vidéo -->
+        <div
+          class="h-auto bg-black text-white rounded-md py-8 sm:py-10 md:py-24 max-w-[90%] sm: md:max-w-lg w-full text-center my-8 md:my-0 md:mx-10 mx-auto"
+        >
+          <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+            Désolé
+          </h1>
+          <p class="text-base sm:text-lg md:text-xl mb-4 sm:mb-6">
+            Cette vidéo n'existe pas
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const menuToggler = document.getElementById("menu-toggler");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuClose = document.getElementById("menu-close");
+
+      // Afficher le menu avec l'animation d'ouverture
+      menuToggler.addEventListener("click", () => {
+        mobileMenu.classList.remove("translate-x-full");
+        mobileMenu.classList.add("translate-x-0");
+      });
+
+      // Fermer le menu avec l'animation de fermeture
+      menuClose.addEventListener("click", () => {
+        mobileMenu.classList.remove("translate-x-0");
+        mobileMenu.classList.add("translate-x-full");
+      });
+
+      // Fonction pour fermer le menu quand la taille de l'écran change
+      const handleResize = () => {
+        if (window.innerWidth >= 768) {
+          mobileMenu.classList.add("translate-x-full");
+        }
+      };
+
+      // Écouteur d'événement pour la taille de la fenêtre
+      window.addEventListener("resize", handleResize);
+
+      // Appel de la fonction pour s'assurer que le menu est bien fermé au départ
+      handleResize();
+    </script>
+
+            <!-- record section -->
+    <section class="py-28 bg-white">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <!-- Image Section (à gauche) -->
+          <div class="w-full md:w-1/2 mb-10 md:mb-0">
+            <img
+              src="./images/image1.svg"
+              alt="Image"
+              class="w-[80%] h-auto mx-auto"
+            />
+          </div>
+
+          <!-- Text Section (à droite) -->
+          <div class="w-full md:w-1/2 text-center md:text-left">
+            <p class="text-lg font-bold text-primary mb-2">Our Track Record</p>
+            <h1
+              class="text-3xl md:text-5xl p-5 md:p-0 font-extrabold text-customGrey mb-5 tracking-wide leading-snug md:leading-normal"
+            >
+              We have been doing this since
+              <span class="text-primary">1999</span> .
+            </h1>
+            <p
+              class="text-md md:text-xl p-8 md:p-0 md:font-semibold font-medium text-customGray mb-6"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+            <div
+              class="flex justify-center md:justify-start gap-8 text-center md:text-left"
+            >
+              <div>
+                <p class="text-2xl font-bold text-customGrey">2282+</p>
+                <p class="text-md text-customBlue font-semibold">Clients</p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-customGrey">3891+</p>
+                <p class="text-md text-customBlue font-semibold">Projects</p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-customGrey">1000+</p>
+                <p class="text-md text-customBlue font-semibold">Awards</p>
+              </div>
+            </div>
+
+            <button
+              class="bg-primary text-white px-6 py-3 rounded mt-10 font-bold hover:bg-customBlue transition"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+            <!-- services Section -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <!-- Section Title -->
+        <div class="text-center">
+          <h1
+            class="text-4xl md:text-5xl md:leading-normal leading-snug font-extrabold text-customGrey tracking-wide mb-6"
+          >
+            Our Professional <span class="text-primary">Services</span>
+          </h1>
+        </div>
+
+        <!-- Cards Section -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 m-14">
+          <!-- Card 1: Ads Management -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-dashed border-primary flex flex-col items-center justify-center py-9 max-w-sm mx-auto"
+          >
+            <div class="text-center mb-4">
+              <div
+                class="w-20 h-20 bg-white border-2 border-primary rounded-full flex items-center justify-center"
+              >
+                <img
+                  src="images/icon1.svg"
+                  alt="Ads Management"
+                  class="w-8 h-8"
+                />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4 text-center">
+              Ads Management
+            </h3>
+            <p
+              class="text-[15px] leading-8 font-600 text-customGray md:px-0 px-2 text-center"
+            >
+              We create and manage ads that you need, from creation to
+              deployment. Lorem ipsum dolor sit amet consicou.
+            </p>
+          </div>
+
+          <!-- Card 2: Video Marketing -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-dashed border-primary flex flex-col items-center justify-center py-9 max-w-sm mx-auto"
+          >
+            <div class="text-center mb-4">
+              <div
+                class="w-20 h-20 bg-white border-2 border-primary rounded-full flex items-center justify-center"
+              >
+                <img
+                  src="images/icon2.svg"
+                  alt="Video Marketing"
+                  class="w-8 h-8"
+                />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4 text-center">
+              Video Marketing
+            </h3>
+            <p
+              class="text-[15px] leading-8 font-600 text-customGray md:px-0 px-2 text-center"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+
+          <!-- Card 3: Customer Relation -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-dashed border-primary flex flex-col items-center justify-center py-9 max-w-sm mx-auto"
+          >
+            <div class="text-center mb-4">
+              <div
+                class="w-20 h-20 bg-white border-2 border-primary rounded-full flex items-center justify-center"
+              >
+                <img
+                  src="images/icon3.svg"
+                  alt="Customer Relation"
+                  class="w-8 h-8"
+                />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4 text-center">
+              Customer Relation
+            </h3>
+            <p
+              class="text-[15px] leading-8 font-600 text-customGray md:px-0 px-2 text-center"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+
+          <!-- Card 4: Product Outreach -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-dashed border-primary flex flex-col items-center justify-center py-9 max-w-sm mx-auto"
+          >
+            <div class="text-center mb-4">
+              <div
+                class="w-20 h-20 bg-white border-2 border-primary rounded-full flex items-center justify-center"
+              >
+                <img
+                  src="images/icon4.svg"
+                  alt="Product Outreach"
+                  class="w-8 h-8"
+                />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4 text-center">
+              Product Outreach
+            </h3>
+            <p
+              class="text-[15px] leading-8 font-600 text-customGray md:px-0 px-2 text-center"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+
+          <!-- Card 5: PR Campaign -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-dashed border-primary flex flex-col items-center justify-center py-9 max-w-sm mx-auto"
+          >
+            <div class="text-center mb-4">
+              <div
+                class="w-20 h-20 bg-white border-2 border-primary rounded-full flex items-center justify-center"
+              >
+                <img src="images/icon5.svg" alt="PR Campaign" class="w-8 h-8" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4 text-center">
+              PR Campaign
+            </h3>
+            <p
+              class="text-[15px] leading-8 font-600 text-customGray md:px-0 px-2 text-center"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+
+          <!-- Card 6: Product Expansion -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-dashed border-primary flex flex-col items-center justify-center py-9 max-w-sm mx-auto"
+          >
+            <div class="text-center mb-4">
+              <div
+                class="w-20 h-20 bg-white border-2 border-primary rounded-full flex items-center justify-center"
+              >
+                <img
+                  src="images/icon6.svg"
+                  alt="Product Expansion"
+                  class="w-8 h-8"
+                />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4 text-center">
+              Product Expansion
+            </h3>
+            <p
+              class="text-[15px] leading-8 font-600 text-customGray md:px-0 px-2 text-center"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+            <!-- expertise Section -->
+    <section class="bg-white py-16 md:ps-8">
+      <div
+        class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+      >
+        <div class="flex justify-center lg:order-2">
+          <img
+            src="images/team.svg"
+            alt="Expertise Illustration"
+            class="w-[90%] h-auto mx-auto"
+          />
+        </div>
+
+        <!-- Left Content -->
+        <div class="text-center lg:text-left">
+          <p class="text-lg font-bold text-primary mb-2">Our Expertise</p>
+          <h1
+            class="text-3xl md:text-5xl p-5 md:p-0 font-extrabold text-customGrey mb-5 tracking-wide leading-snug md:leading-tight"
+          >
+            We have the most
+            <span class="text-primary">professional</span> marketing team.
+          </h1>
+          <p
+            class="text-sm md:text-xl p-8 md:p-0 md:font-semibold font-medium text-customGray mb-6"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+
+          <!-- Horizontal Cards -->
+          <div class="space-y-6">
+            <!-- Card 1 -->
+            <div
+              class="flex flex-col md:items-start items-center text-center md:flex-row md:text-left space-x-0 md:space-x-4 py-2"
+            >
+              <div
+                class="w-10 h-10 bg-white border border-primary rounded-full flex items-center justify-center mb-3 md:mb-0"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-briefcase text-primary"
+                >
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-primary tracking-wide">
+                  Professionalism
+                </h3>
+                <p class="text-sm p-3 md:p-0 text-customGrey">
+                  We have the best professional marketing people across the
+                  globe just to work with you.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="flex flex-col md:items-start items-center text-center md:flex-row md:text-left space-x-0 md:space-x-4 py-2"
+            >
+              <div
+                class="w-10 h-10 bg-white border border-primary rounded-full flex items-center justify-center mb-3 md:mb-0"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-dollar-sign text-primary"
+                >
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path
+                    d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-primary tracking-wide">
+                  Affordable
+                </h3>
+                <p class="text-sm p-3 md:p-0 text-customGrey">
+                  We promise to offer you the best rate we can - at par with the
+                  industry standard.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="bg-primary text-sm text-white px-8 py-3 rounded mt-10 font-bold hover:bg-customBlue transition"
+          >
+            See Our Portfolio
+          </button>
+        </div>
+      </div>
+    </section>
+
+            <!-- portfolio Section -->
+    <section class="bg-white py-32 px-8">
+      <div
+        class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
+      >
+        <!-- Right Content (Title, Description, Button) -->
+        <div class="text-center lg:text-left self-stretch order-1 lg:order-2">
+          <p class="text-lg font-bold text-primary mb-6">Our Portfolio</p>
+          <h2
+            class="text-3xl md:text-5xl font-extrabold text-customGrey mb-8 tracking-wide leading-relaxed"
+          >
+            We've done some <span class="text-primary">amazing projects.</span>
+          </h2>
+          <p class="text-md md:text-xl text-customGray mb-10 mx-auto max-w-3xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad
+            minim veniam.
+          </p>
+          <a
+            href="#"
+            class="text-primary text-xl font-bold flex items-center space-x-2 hover:text-customBlue hover:underline hover:underline-offset-4 hover:underline-primary transition"
+          >
+            <span>View All Projects</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14M12 5l7 7-7 7"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Left Content (Project Cards) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 order-2 lg:order-1">
+          <!-- Card 1 (Tesla) -->
+          <div class="bg-white">
+            <img
+              src="images/photo1.jpeg"
+              alt="Tesla Project"
+              class="w-full h-80 object-cover rounded mb-4"
+            />
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-bold text-primary">Tesla Inc.</h3>
+              <p class="text-sm text-customGray font-bold">Ad Campaign</p>
+            </div>
+            <p class="text-xl font-bold text-customGrey mb-4">
+              Personalized Ad Campaign using Google AdWords
+            </p>
+            <div
+              class="flex items-center justify-center text-customGray space-x-4 mb-6"
+            >
+              <div class="flex items-center space-x-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-clock"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <p class="text-sm font-semibold">90 Days Campaign</p>
+              </div>
+              <div class="flex items-center space-x-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-map-pin"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <p class="text-sm font-semibold">New York</p>
+              </div>
+            </div>
+            <button
+              class="bg-primary text-white px-6 py-3 rounded font-bold w-full text-center hover:bg-customBlue transition"
+            >
+              Read Case Study
+            </button>
+          </div>
+
+          <!-- Card 2 (Nestle) -->
+          <div class="bg-white">
+            <img
+              src="images/photo2.jpeg"
+              alt="Nestle Project"
+              class="w-full h-80 object-cover rounded mb-4"
+            />
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-bold text-primary">Nestle</h3>
+              <p class="text-sm text-customGray font-bold">SEO Marketing</p>
+            </div>
+            <p class="text-xl font-bold text-customGrey mb-4">
+              Ranking #1 for keywords like Chocolate, Snack
+            </p>
+            <div
+              class="flex items-center justify-center text-customGray space-x-4 mb-6"
+            >
+              <div class="flex items-center space-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-clock"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <p class="text-sm font-semibold">180 Day Campaign</p>
+              </div>
+              <div class="flex items-center space-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-map-pin"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <p class="text-sm font-semibold">Palo Alto</p>
+              </div>
+            </div>
+            <button
+              class="bg-primary text-white px-6 py-3 rounded font-bold w-full text-center hover:bg-customBlue transition"
+            >
+              Read Case Study
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+            <!-- testimonials Section -->
+<section class="bg-white py-16">
+  <div class="container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row mt-12 items-center md:items-stretch">
+      <!-- Texte -->
+      <div class="flex-1 md:pr-8 flex flex-col justify-between text-center md:text-left">
+        <div class="w-full">
+          <p class="text-lg font-bold text-primary mb-6">Testimonials</p>
+          <h1 class="text-3xl md:text-5xl font-extrabold text-customGrey">
+            Our Clients <span class="text-primary">Love Us.</span>
+          </h1>
+          <p
+            class="text-md md:text-lg font-medium text-customGray mt-4 mb-10"
+          >
+            Here are what some of our amazing customers are saying about our
+            marketing professionals. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
+          <blockquote
+            id="quote"
+            class="text-customGrey text-xl md:text-2xl mt-14"
+          >
+            “ Initial quote goes here. ”
+          </blockquote>
+        </div>
+        <div class="mt-6 flex items-center justify-center md:justify-start">
+          <img
+            id="avatar"
+            class="w-12 md:w-20 h-12 md:h-20 md:my-0 my-8 rounded-full"
+            src="images/profil2.jpeg"
+            alt="Adam Cuppy"
+          />
+          <div class="ml-4">
+            <p
+              id="name"
+              class="md:text-3xl text-xl font-semibold text-primary"
+            >
+              Adam Cuppy
+            </p>
+            <p
+              id="role"
+              class="text-customGray text-sm md:text-md font-medium"
+            >
+              Founder, Nestle
+            </p>
+          </div>
+        </div>
+
+        <!-- Image ajoutée en mode responsive -->
+        <div class="md:hidden mt-4 w-full relative">
+          <img
+            id="testimonial-image-responsive"
+            class="rounded-lg shadow-lg w-full h-auto object-cover"
+            src="images/photoProfil2.jpeg"
+            alt="Team working"
+          />
+          <!-- Boutons de navigation -->
+          <div
+            class="absolute bottom-0 right-0 bg-gray-100 p-2 rounded-tl-3xl flex space-x-4"
+          >
+            <button
+              id="prev-button-responsive"
+              class="bg-primary text-white p-2 w-8 h-8 flex items-center justify-center rounded-full hover:bg-customBlue"
+            >
+              &lt;
+            </button>
+            <button
+              id="next-button-responsive"
+              class="bg-primary text-white p-2 w-8 h-8 flex items-center justify-center rounded-full hover:bg-customBlue"
+            >
+              &gt;
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image principale en mode desktop -->
+      <div class="hidden md:flex flex-1 justify-center items-center mt-8 md:mt-0">
+        <div class="relative w-full max-w-[450px] md:h-[550px] h-[350px]">
+          <img
+            id="testimonial-image"
+            class="rounded-lg shadow-lg w-full h-full object-cover"
+            src="images/photoProfil2.jpeg"
+            alt="Team working"
+          />
+          <div
+            class="absolute bottom-0 right-0 bg-gray-100 p-4 px-8 rounded-tl-3xl flex space-x-6"
+          >
+            <button
+              id="prev-button"
+              class="bg-primary text-white p-2 w-8 h-8 flex items-center justify-center rounded-full hover:bg-customBlue"
+            >
+              &lt;
+            </button>
+            <button
+              id="next-button"
+              class="bg-primary text-white p-2 w-8 h-8 flex items-center justify-center rounded-full hover:bg-customBlue"
+            >
+              &gt;
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+            
+    <script>
+      // Données des témoignages
+const testimonials = [
+  {
+    quote:
+      "“ Sinor Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Exceteur sint occaecat cupidatat non proident, sunt in culpa qui officia. ”",
+    name: "Adam Cuppy",
+    role: "Founder, Nestle",
+    avatar: "images/profil2.jpeg",
+    image: "images/photoProfil2.jpeg",
+  },
+  {
+    quote:
+      "“ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.  ”",
+    name: "Charlotte Hale",
+    role: "CEO,Tesla Inc",
+    avatar: "images/profil1.jpeg",
+    image: "images/photoProfil1.jpeg",
+  },
+];
+
+// Éléments DOM
+const quoteElement = document.getElementById("quote");
+const nameElement = document.getElementById("name");
+const roleElement = document.getElementById("role");
+const avatarElement = document.getElementById("avatar");
+const imageElement = document.getElementById("testimonial-image");
+const imageResponsiveElement = document.getElementById("testimonial-image-responsive");
+
+// Index actuel
+let currentIndex = 0;
+
+// Mise à jour des données affichées
+function updateTestimonial(index) {
+  const testimonial = testimonials[index];
+  quoteElement.textContent = testimonial.quote;
+  nameElement.textContent = testimonial.name;
+  roleElement.textContent = testimonial.role;
+  avatarElement.src = testimonial.avatar;
+  imageElement.src = testimonial.image;
+
+  // Mettre à jour également l'image en mode responsive
+  if (imageResponsiveElement) {
+    imageResponsiveElement.src = testimonial.image;
+  }
+}
+
+// Navigation des boutons
+function goToPreviousTestimonial() {
+  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+  updateTestimonial(currentIndex);
+}
+
+function goToNextTestimonial() {
+  currentIndex = (currentIndex + 1) % testimonials.length;
+  updateTestimonial(currentIndex);
+}
+
+// Écouteurs pour les boutons en mode desktop
+document.getElementById("prev-button").addEventListener("click", goToPreviousTestimonial);
+document.getElementById("next-button").addEventListener("click", goToNextTestimonial);
+
+// Écouteurs pour les boutons en mode responsive
+document.getElementById("prev-button-responsive").addEventListener("click", goToPreviousTestimonial);
+document.getElementById("next-button-responsive").addEventListener("click", goToNextTestimonial);
+
+// Initialisation
+updateTestimonial(currentIndex);
+
+    </script>
+
+            <!-- faqs Section -->
+    <section class="bg-white py-16">
+      <div class="container mx-auto px-6 md:px-2 lg:px-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <!-- Illustration -->
+          <div class="md:w-1/2">
+            <img
+              src="images/imageFaqs.svg"
+              alt="Illustration"
+              class="mx-auto md:mx-0 max-w-[85%]"
+            />
+          </div>
+
+          <!-- FAQ content -->
+          <div class="md:w-1/2 md:pl-8 mt-8 md:mt-0 px-6 md:px-2 lg:px-4">
+            <p class="text-lg font-bold text-primary mb-6">FAQs</p>
+            <h2
+              class="text-3xl md:text-5xl font-extrabold text-customGrey tracking-wide"
+            >
+              Do you have <span class="text-primary">Questions?</span>
+            </h2>
+            <p
+              class="text-md md:text-lg font-medium text-customGray mt-10 mb-18"
+            >
+              Here are some frequently asked questions about our hotels from our
+              loving customers. Should you have any other questions, feel free
+              to reach out via the contact form below.
+            </p>
+
+            <div class="mt-8 space-y-4">
+              <!-- FAQ Items -->
+              <div class="faq-item border-b pb-4">
+                <button
+                  class="flex justify-between items-center w-full text-left text-gray-800 font-medium focus:outline-none"
+                  onclick="toggleFAQ(this)"
+                >
+                  <span class="text-lg md:text-xl font-semibold text-customGrey">Is lunch provided free of cost?</span>
+                  <span class="text-white border w-6 h:6 md:w-8 md:h-8 text-center rounded-full bg-primary">+</span>
+                </button>
+                <p class="faq-answer hidden text-customGray mt-2">
+                  Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system.
+                </p>
+              </div>
+            
+              <div class="faq-item border-b pb-4">
+                <button
+                  class="flex justify-between items-center w-full text-left text-gray-800 font-medium focus:outline-none"
+                  onclick="toggleFAQ(this)"
+                >
+                  <span class="text-lg md:text-xl font-semibold text-customGrey">Do you have 2 Bedroom suites?</span>
+                  <span class="text-white border w-6 h:6 md:w-8 md:h-8 text-center rounded-full bg-primary">+</span>
+                </button>
+                <p class="faq-answer hidden text-customGray mt-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            
+              <div class="faq-item border-b pb-4">
+                <button
+                  class="flex justify-between items-center w-full text-left text-gray-800 font-medium focus:outline-none"
+                  onclick="toggleFAQ(this)"
+                >
+                  <span class="text-lg md:text-xl font-semibold text-customGrey">Are Wi-Fi costs included in the price?</span>
+                  <span class="text-white border w-6 h:6 md:w-8 md:h-8 text-center rounded-full bg-primary">+</span>
+                </button>
+                <p class="faq-answer hidden text-customGray mt-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            
+              <div class="faq-item pb-4">
+                <button
+                  class="flex justify-between items-center w-full text-left text-gray-800 font-medium focus:outline-none"
+                  onclick="toggleFAQ(this)"
+                >
+                  <span class="text-lg md:text-xl font-semibold text-customGrey">Where can I reach you for support?</span>
+                  <span class="text-white border w-6 h:6 md:w-8 md:h-8 text-center rounded-full bg-primary">+</span>
+                </button>
+                <p class="faq-answer hidden text-customGray mt-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function toggleFAQ(button) {
+        const answer = button.nextElementSibling;
+        const isVisible = !answer.classList.contains("hidden");
+
+        // Collapse all other FAQs
+        document.querySelectorAll(".faq-answer").forEach((ans) => {
+          ans.classList.add("hidden");
+        });
+        document
+          .querySelectorAll(".faq-item button span:last-child")
+          .forEach((icon) => {
+            icon.textContent = "+";
+          });
+
+        // Toggle the current FAQ
+        if (!isVisible) {
+          answer.classList.remove("hidden");
+          button.querySelector("span:last-child").textContent = "−";
+        }
+      }
+    </script>
+
+            <!-- blog Section -->
+    <section class="bg-white py-16 px-6">
+              <div class="container mx-auto text-center">
+                <p class="text-lg font-bold text-primary mb-2">Blog</p>
+                <h2 class="text-4xl md:text-5xl md:leading-normal leading-snug font-extrabold text-customGrey tracking-wide mb-6">
+                  We Love <span class="text-primary">Writing.</span>
+                </h2>
+                <p class="text-sm md:text-md p-4 md:p-0 font-medium text-customGray mb-8">
+                  Some amazing blog posts that are written by even more amazing people.
+                </p>
+            
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-10 justify-items-center">
+                  <!-- Blog Card 1 -->
+                  <div class="bg-white rounded overflow-hidden max-w-xs">
+                    <img
+                      src="images/blog1.jpeg"
+                      alt="Blog 1"
+                      class="w-full h-56 object-cover"
+                    />
+                    <div class="p-6 border-2 border-t-0 border-dashed border-primary text-center md:text-left">
+                      <div class="flex items-center text-sm text-customGray mb-2 justify-center md:justify-start">
+                        <span class="mr-2">&#128100; Adam Wathan</span>
+                        <span>&#128205; SEO</span>
+                      </div>
+                      <h4 class="text-lg font-semibold text-customGrey mb-2">
+                        Optimizing your website for your main keyword
+                      </h4>
+                      <p class="md:text-md text-sm text-customGray mb-4 py-4">
+                        Learn how to improve your site's search engine rankings with essential techniques.
+                      </p>
+                      <a
+                        href="#"
+                        class="bg-primary text-white text-sm font-medium py-4 px-8 rounded hover:bg-customBlue transition-colors"
+                      >
+                        Read Post
+                      </a>
+                    </div>
+                  </div>
+            
+                  <!-- Blog Card 2 -->
+                  <div class="bg-white rounded overflow-hidden max-w-xs">
+                    <img
+                      src="images/blog2.jpeg"
+                      alt="Blog 2"
+                      class="w-full h-56 object-cover"
+                    />
+                    <div class="p-6 border-2 border-t-0 border-dashed border-primary text-center md:text-left">
+                      <div class="flex items-center text-sm text-customGray mb-2 justify-center md:justify-start">
+                        <span class="mr-2">&#128100; Owais Khan</span>
+                        <span>&#128205; Advertising</span>
+                      </div>
+                      <h4 class="text-lg font-semibold text-customGrey mb-2">
+                        Creating The perfect advertisement campaign
+                      </h4>
+                      <p class="md:text-md text-sm text-customGray mb-4 py-4">
+                        Discover creative strategies for engaging and impactful ad campaigns.
+                      </p>
+                      <a
+                        href="#"
+                        class="bg-primary text-white text-sm font-medium py-4 px-8 rounded hover:bg-customBlue transition-colors"
+                      >
+                        Read Post
+                      </a>
+                    </div>
+                  </div>
+            
+                  <!-- Blog Card 3 -->
+                  <div class="bg-white rounded overflow-hidden max-w-xs">
+                    <img
+                      src="images/blog3.jpeg"
+                      alt="Blog 3"
+                      class="w-full h-56 object-cover"
+                    />
+                    <div class="p-6 border-2 border-t-0 border-dashed border-primary text-center md:text-left">
+                      <div class="flex items-center text-sm text-customGray mb-2 justify-center md:justify-start">
+                        <span class="mr-2">&#128100; Steve Schoger</span>
+                        <span>&#128205; Social Media</span>
+                      </div>
+                      <h4 class="text-lg font-semibold text-customGrey mb-2">
+                        Efficient management of your social media assets
+                      </h4>
+                      <p class="md:text-md text-sm text-customGray mb-4 py-4">
+                        Tips for streamlining and enhancing your social media presence.
+                      </p>
+                      <a
+                        href="#"
+                        class="bg-primary text-white text-sm font-medium py-4 px-8 rounded hover:bg-customBlue transition-colors"
+                      >
+                        Read Post
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    </section>   
+
+            <!-- contact Section -->
+    <section class="bg-white py-12">
+      <div
+        class="container mx-auto px-4 text-center md:text-left md:flex md:items-center px-12"
+      >
+        <div class="md:w-1/2">
+          <p class="text-lg font-bold text-primary mb-2">Contact Us</p>
+          <h2 class="text-4xl md:text-5xl md:leading-normal leading-snug font-extrabold text-customGrey tracking-wide mb-6">
+            Feel free to <span class="text-primary">get in touch</span> with
+            us.
+          </h2>
+          <p class="text-sm md:text-xl p-8 md:p-0 md:font-medium font-normal text-customGray mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <form class="mt-6 flex flex-col md:flex-row justify-center md:justify-start space-y-2 py-4 md:space-y-0 md:space-x-1 gap-3">
+            <input
+              type="email"
+              placeholder="Your Email Address"
+              class="border px-4 md:py-0 py-4 w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+            <button
+              type="submit"
+              class="bg-primary text-white font-semibold py-4 px-6 hover:bg-customBlue"
+            >
+              Contact Me
+            </button>
+          </form>
+        </div>
+        <div class="md:w-1/2 mt-8 md:mt-0">
+          <img
+            src="images/email.svg"
+            alt="Contact Illustration"
+            class="mx-auto md:mx-0 w-[90%]"
+          />
+        </div>
+      </div>
+    </section>
+
+            <!-- footer Section -->
+    <footer class="bg-gray-900  text-white py-24">
+      <div class="container mx-auto px-4 text-center">
+        <!-- Logo  -->
+        <div class="flex items-center justify-center space-x-2 mb-4">
+          <img src="images/logo.svg" alt="Logo" class="w-8 h-8" />
+          <span class="text-2xl font-bold">Treact</span>
+        </div>
+
+        <!-- Liens de navigation -->
+        <ul
+          class="md:flex items-center justify-center gap-6 py-8 text-md font-semibold text-white"
+        >
+          <li class="group md:py-0 py-3">
+            <a href="#home" class="relative hover:text-white transition">
+              Home
+              <span
+                class="absolute left-0 bottom-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-all"
+              ></span>
+            </a>
+          </li>
+          <li class="group md:p-0 py-3">
+            <a href="#about" class="relative hover:text-white transition">
+              About
+              <span
+                class="absolute left-0 bottom-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-all"
+              ></span>
+            </a>
+          </li>
+          <li class="group md:p-0 py-3">
+            <a href="#contact" class="relative hover:text-white transition">
+              Contact Us
+              <span
+                class="absolute left-0 bottom-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-all"
+              ></span>
+            </a>
+          </li>
+          <li class="group md:p-0 py-3">
+            <a href="#blog" class="relative hover:text-white transition">
+              Blog
+              <span
+                class="absolute left-0 bottom-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-all"
+              ></span>
+            </a>
+          </li>
+          <li class="group md:p-0 py-3">
+            <a href="#reviews" class="relative hover:text-white transition">
+              Reviews
+              <span
+                class="absolute left-0 bottom-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-all"
+              ></span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Icônes de réseaux sociaux -->
+        <div class="sc-jTYCaT jiajKW flex items-center justify-center gap-5  ">
+          <Link href="https://facebook.com" class="sc-jQHtVU iyjWBi"
+            ><svg fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
+              <path
+                d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"
+              ></path></svg></Link
+          ><Link href="https://twitter.com" class="sc-jQHtVU iyjWBi"
+            ><svg fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
+              <path
+                d="M22.162 5.656a8.384 8.384 0 01-2.402.658A4.196 4.196 0 0021.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 00-7.126 3.814 11.874 11.874 0 01-8.62-4.37 4.168 4.168 0 00-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 01-1.894-.523v.052a4.185 4.185 0 003.355 4.101 4.21 4.21 0 01-1.89.072A4.185 4.185 0 007.97 16.65a8.394 8.394 0 01-6.191 1.732 11.83 11.83 0 006.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 002.087-2.165z"
+              ></path></svg></Link
+          ><Link href="https://youtube.com" class="sc-jQHtVU iyjWBi"
+            ><svg fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
+              <path
+                d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5l6-3.5-6-3.5v7z"
+              ></path></svg
+          ></Link>
+        </div>
+
+        <!-- Copyright -->
+        <p class="text-gray-500 text-sm py-12">
+          © Copyright 2020, Treact Inc. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
