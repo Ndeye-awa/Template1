@@ -1,6 +1,6 @@
 [build]
-  publish = "dist"
-  command = "npm run build" # ou le script utilisé pour générer le dossier dist
+  publish = "."
+  command = "" # Si vous n'avez pas de processus de build, laissez vide.
 
 [[redirects]]
   from = "/*"
