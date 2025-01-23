@@ -11,6 +11,24 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+          sans: ["Inter", "sans-serif"],
+        },
+          colors: {
+          primary: "rgb(100 21 255)", // Ta couleur personnalisée
+          customPurple: "#290573",
+          customBlue: "#5011cc",
+          customGrey: "#243e63",
+          customGray: "#7c8ba1",
+        },
+        },
+      },
+    };
+    </script>
     <link rel="icon" type="image/svg+xml" href="./images/logo.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1248,7 +1266,7 @@ updateTestimonial(currentIndex);
           ></Link>
         </div>
 
-
+        <script></script>
 
         <!-- Copyright -->
         <p class="text-gray-500 text-sm pt-12">
