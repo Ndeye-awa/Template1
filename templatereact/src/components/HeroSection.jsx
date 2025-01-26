@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import {
   HeroWrapper,
+  HeroContentWrapper,
   Navbar,
   LogoWrapper,
   NavLinkContainer,
@@ -22,6 +23,7 @@ import {
   RecordContentWrapper,
   ServicesSectionWrapper,
   ExpertiseSectionWrapper,
+  PortfolioSectionWrapper,
 } from "./StyledComponents"; // Assurez-vous que le chemin d'importation est correct
 
 const HeroSection = () => {
@@ -29,50 +31,52 @@ const HeroSection = () => {
 
   return (
     <HeroWrapper>
-      <Navbar>
-        <LogoWrapper>
-          <img src="/images/logo.svg" alt="Logo" />
-          <h1>Treact</h1>
-        </LogoWrapper>
-        <NavLinkContainer>
-          <NavLinks open={isMenuOpen}>
-            <li>About</li>
-            <li>Blog</li>
-            <li>Locations</li>
-            <li>Pricing</li>
-            {isMenuOpen && (
-              <li>
-                <HireButton>Hire Us</HireButton>
-              </li>
-            )}
-          </NavLinks>
-        </NavLinkContainer>
-        {!isMenuOpen && (
-          <DesktopHireButton>
-            <HireButton>Hire Us</HireButton>
-          </DesktopHireButton>
-        )}
-        <Toggler onClick={() => setMenuOpen(!isMenuOpen)}>☰</Toggler>
-        <CloseButton open={isMenuOpen} onClick={() => setMenuOpen(false)}>
-          ✖
-        </CloseButton>
-      </Navbar>
+      <HeroContentWrapper>
+        <Navbar>
+          <LogoWrapper>
+            <img src="/images/logo.svg" alt="Logo" />
+            <h1>Treact</h1>
+          </LogoWrapper>
+          <NavLinkContainer>
+            <NavLinks open={isMenuOpen}>
+              <li>About</li>
+              <li>Blog</li>
+              <li>Locations</li>
+              <li>Pricing</li>
+              {isMenuOpen && (
+                <li>
+                  <HireButton>Hire Us</HireButton>
+                </li>
+              )}
+            </NavLinks>
+          </NavLinkContainer>
+          {!isMenuOpen && (
+            <DesktopHireButton>
+              <HireButton>Hire Us</HireButton>
+            </DesktopHireButton>
+          )}
+          <Toggler onClick={() => setMenuOpen(!isMenuOpen)}>☰</Toggler>
+          <CloseButton open={isMenuOpen} onClick={() => setMenuOpen(false)}>
+            ✖
+          </CloseButton>
+        </Navbar>
 
-      <ContentWrapper>
-        <TextWrapper>
-          <p>
-            <span></span> We have now launched operations in Europe.
-          </p>
-          <h1>Hire the best</h1>
-          <h2>Marketing Team.</h2>
-          <button>Read Customer Stories</button>
-        </TextWrapper>
+        <ContentWrapper>
+          <TextWrapper>
+            <p>
+              <span></span> We have now launched operations in Europe.
+            </p>
+            <h1>Hire the best</h1>
+            <h2>Marketing Team.</h2>
+            <button>Read Customer Stories</button>
+          </TextWrapper>
 
-        <VideoPlaceholder>
-          <h1>Désolé</h1>
-          <p>Cette vidéo n'existe pas</p>
-        </VideoPlaceholder>
-      </ContentWrapper>
+          <VideoPlaceholder>
+            <h1>Désolé</h1>
+            <p>Cette vidéo n'existe pas</p>
+          </VideoPlaceholder>
+        </ContentWrapper>
+      </HeroContentWrapper>
 
       {/* Record Section */}
       <RecordSectionWrapper>
@@ -292,6 +296,156 @@ const HeroSection = () => {
           </div>
         </div>
       </ExpertiseSectionWrapper>
+
+      {/* expertise Section */}
+      <PortfolioSectionWrapper>
+        <div className="container">
+          {/* Right Content (Title, Description, Button) */}
+          <div className="content">
+            <p className="subtitle">Our Portfolio</p>
+            <h2>
+              We've done some <span>amazing projects.</span>
+            </h2>
+            <p className="description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad
+              minim veniam.
+            </p>
+            <a href="#" className="cta-link">
+              <span>View All Projects</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="arrow-icon"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 12h14M12 5l7 7-7 7"
+                />
+              </svg>
+            </a>
+          </div>
+
+          {/* Left Content (Project Cards) */}
+          <div className="cards">
+            {/* Card 1 */}
+            <div className="card">
+              <img
+                src="images/photo1.jpeg"
+                alt="Tesla Project"
+                className="card-image"
+              />
+              <div className="card-header">
+                <h3>Tesla Inc.</h3>
+                <p>Ad Campaign</p>
+              </div>
+              <p className="card-description">
+                Personalized Ad Campaign using Google AdWords
+              </p>
+              <div className="card-details">
+                <div className="detail">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="icon"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <p>90 Days Campaign</p>
+                </div>
+                <div className="detail">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="icon"
+                  >
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <p>New York</p>
+                </div>
+              </div>
+              <button className="cta-button">Read Case Study</button>
+            </div>
+
+            {/* Card 2 */}
+            <div className="card">
+              <img
+                src="images/photo2.jpeg"
+                alt="Nestle Project"
+                className="card-image"
+              />
+              <div className="card-header">
+                <h3>Nestle</h3>
+                <p>SEO Marketing</p>
+              </div>
+              <p className="card-description">
+                Ranking #1 for keywords like Chocolate, Snack
+              </p>
+              <div className="card-details">
+                <div className="detail">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="icon"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <p>180 Day Campaign</p>
+                </div>
+                <div className="detail">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="icon"
+                  >
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <p>Palo Alto</p>
+                </div>
+              </div>
+              <button className="cta-button">Read Case Study</button>
+            </div>
+          </div>
+        </div>
+      </PortfolioSectionWrapper>
     </HeroWrapper>
   );
 };
